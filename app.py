@@ -16,38 +16,6 @@ def hello_world():
     return '<h1>你好</h1>'
 
 
-# if __name__ == '__main__':
-#     app.run(debug=True)
-# @app.route('/api', methods=['GET'])
-# def hello_world_1():
-#     d = {}
-#     # d['icon_add'] = str(request.args.get('url'))
-#     d['icon_add'] = request.args.get('url')+'/favicon.ico'
-
-#     return jsonify(d)
-
-
-# @app.route('/windows', methods=['GET'])
-# def hello_world_2():
-#     dc = {}
-#     headers = {
-#         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'}
-#     r = requests.get(
-#         'https://www.microsoft.com/zh-cn/software-download/windows10/', "lxml", headers=headers)
-#     r.encoding = "utf-8"
-#     soup = BeautifulSoup(r.text)
-#     xinxi = soup.find_all('h2')[0].text
-#     xiazai = soup.find_all('a', id='windows10-upgrade-now')[0]['href']
-
-# # d['icon_add'] = str(request.args.get('url'))
-#     dc['title'] = xinxi
-#     dc['url'] = xiazai
-
-#     return jsonify(dc)
-
-# 开始毛片
-
-
 @app.route('/index', methods=['GET'])
 # 开启跨越请求
 @cross_origin()
